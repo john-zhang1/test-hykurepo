@@ -23,7 +23,7 @@ class Account < ActiveRecord::Base
   def self.admin_host
     host = Settings.multitenancy.admin_host
     host ||= ENV['HOST']
-    host ||= 'localhost'
+    host ||= '172.28.128.3'
     canonical_cname(host)
   end
 
